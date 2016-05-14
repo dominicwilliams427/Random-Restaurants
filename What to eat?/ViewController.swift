@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.errorLabel.hidden = true
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.tap(_:)))
+        view.addGestureRecognizer(tapGesture)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,9 +44,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func randomizeRestaurantPressed(sender: AnyObject) {
-        let randomIndex = Int(arc4random_uniform(UInt32(self.restaurantsArray.count)))
-        self.restaurantLabel.text = self.restaurantsArray[randomIndex]
+        
+        if self.restaurantsArray.isEmpty != true {
+            let randomIndex = Int(arc4random_uniform(UInt32(self.restaurantsArray.count)))
+            self.restaurantLabel.text = self.restaurantsArray[randomIndex]
+        }
+        
     }
 
+    func tap(gesture: UITapGestureRecognizer){
+        self.inputRestaurantField.resignFirstResponder()
+    }
 }
 

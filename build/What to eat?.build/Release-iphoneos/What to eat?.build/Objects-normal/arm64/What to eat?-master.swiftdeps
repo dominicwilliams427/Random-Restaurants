@@ -1,0 +1,6 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.8 clang-703.0.31)"
+options: "0428d6cd42734fc49362d6edf6d181e1"
+build_time: [516479861, 525787000]
+inputs:
+  "/Users/Dominic/Documents/Projects/What to eat?/What to eat?/ViewController.swift": [516479042, 0]
+  "/Users/Dominic/Documents/Projects/What to eat?/What to eat?/AppDelegate.swift": [516475474, 0]
